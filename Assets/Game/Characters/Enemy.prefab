@@ -1,17 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &307157374208837822
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2116028948011199730}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 294f171ebcd859b479d461d93561029c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!136 &923935590835100537
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -26,6 +14,32 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &-7200732119577337899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2116028948011199730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 025032826f5c9fa4e911dacbe12e7395, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chaseDistance: 8
+  suspicionTime: 5
+--- !u!114 &307157374208837822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2116028948011199730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 294f171ebcd859b479d461d93561029c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3269812504696769843
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -90,6 +104,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1433644453, guid: 255ce563dc73ab447b567fffbe7aa8d5, type: 3}
+      propertyPath: m_Speed
+      value: 3.66
+      objectReference: {fileID: 0}
     - target: {fileID: 4920966234590458859, guid: 255ce563dc73ab447b567fffbe7aa8d5,
         type: 3}
       propertyPath: m_Name
@@ -149,6 +167,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6296363267337156865, guid: 255ce563dc73ab447b567fffbe7aa8d5,
+        type: 3}
+      propertyPath: health
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1833750661, guid: 255ce563dc73ab447b567fffbe7aa8d5, type: 3}
