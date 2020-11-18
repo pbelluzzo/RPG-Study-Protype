@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using RPG.Core;
+using UnityEditor;
 
 namespace RPG.Movement
 {
     public class Mover : MonoBehaviour, IAction
     {
         [SerializeField] Transform target;
-        Health health;
+        [SerializeField] float maximumSpeed = 5f;
+        Health health;      
         NavMeshAgent navMeshAgent;
 
         void Start()
@@ -32,15 +34,16 @@ namespace RPG.Movement
             GetComponent<Animator>().SetFloat("forwardSpeed", currentSpeed);
         }
 
-        public void StartMoveAction(Vector3 destination)
+        public void StartMoveAction(Vector3 destination, float speedFraction)
         {
             GetComponent<ActionScheduler>().StartAction(this);
-            MoveTo(destination);
+            MoveTo(destination, speedFraction);
         }
 
-        public void MoveTo(Vector3 destination)
+        public void MoveTo(Vector3 destination, float speedFraction)
         {
             navMeshAgent.destination = destination;
+            navMeshAgent.speed = maximumSpeed * Mathf.Clamp01(speedFraction);
             navMeshAgent.isStopped = false;
         }
 
