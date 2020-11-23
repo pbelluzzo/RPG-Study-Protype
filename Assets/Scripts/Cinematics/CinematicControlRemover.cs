@@ -8,7 +8,6 @@ using UnityEngine.Playables;
 public class CinematicControlRemover : MonoBehaviour
 {
     GameObject player;
-
     private void Start()
     {
         GameObject player = GameObject.FindWithTag("Player");
