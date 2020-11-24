@@ -10,7 +10,7 @@ public class CinematicControlRemover : MonoBehaviour
     GameObject player;
     private void Start()
     {
-        GameObject player = GameObject.FindWithTag("Player");
+        player = GameObject.FindWithTag("Player");
         PlayableDirector director = GetComponent<PlayableDirector>();
         director.played += DisableControl;
         director.stopped += EnableControl;
