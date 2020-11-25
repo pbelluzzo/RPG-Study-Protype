@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -97,7 +97,8 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: f2f5b2dcc34b81a4194caa6c488d8f36,
+    type: 2}
   m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
@@ -364,6 +365,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8026397524298363899, guid: 293a2c9282fea144a9ab5af54ab51520,
+        type: 3}
+      propertyPath: uniqueIdentifier
+      value: 351c3592-4acf-4cc5-9a28-cb8ad552e19b
+      objectReference: {fileID: 0}
     - target: {fileID: -7611488979045275751, guid: 293a2c9282fea144a9ab5af54ab51520,
         type: 3}
       propertyPath: sceneToLoad
@@ -507,6 +513,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5745021839384995699, guid: 041780acc914e214cbfee726c1517b8d,
+        type: 3}
+      propertyPath: m_BoundingSphereOverride.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5745021839384995699, guid: 041780acc914e214cbfee726c1517b8d,
+        type: 3}
+      propertyPath: m_BoundingSphereOverride.y
+      value: 8.8708e-41
+      objectReference: {fileID: 0}
+    - target: {fileID: 5745021839384995699, guid: 041780acc914e214cbfee726c1517b8d,
+        type: 3}
+      propertyPath: m_BoundingSphereOverride.w
+      value: 3.6875
       objectReference: {fileID: 0}
     - target: {fileID: 5745021839450797110, guid: 041780acc914e214cbfee726c1517b8d,
         type: 3}
