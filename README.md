@@ -1,2 +1,2 @@
 # RPG-Study-Protype
- Project made to study RPG's most common mechanics
+ Project made following gamedev.tv course to study RPG's most common mechanics
