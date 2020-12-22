@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using RPG.Movement;
 using RPG.Combat;
-using RPG.Core;
+using RPG.Resources;
+using System;
 
 namespace RPG.Controller
 {
@@ -15,6 +16,7 @@ namespace RPG.Controller
         {
             health = GetComponent<Health>();
         }
+
         void Update()
         {
             if (health.IsDead()) return;

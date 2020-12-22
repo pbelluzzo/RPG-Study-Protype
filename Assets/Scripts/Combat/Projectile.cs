@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
-using RPG.Core;
+using RPG.Resources;
 
 namespace RPG.Combat
 {
@@ -15,6 +15,8 @@ namespace RPG.Combat
 
         Health target = null;
         float damage = 0;
+
+        GameObject instigator;
         void Start()
         {
             transform.LookAt(GetAimLocation());
@@ -29,8 +31,9 @@ namespace RPG.Combat
             transform.Translate(Vector3.forward * speed * Time.deltaTime);
         }
 
-        public void SetTarget(Health target, float damage)
+        public void SetTarget(Health target,GameObject instigator, float damage)
         {
+            this.instigator = instigator;
             this.target = target;
             this.damage = damage;
         }
@@ -55,7 +58,7 @@ namespace RPG.Combat
                 var effect = Instantiate(hitEffect, GetAimLocation(), transform.rotation);
                 Destroy(effect, 5f);
             }
-            target.TakeDamage(damage);
+            target.TakeDamage(instigator,damage);
             Destroy(gameObject);
         }
     }

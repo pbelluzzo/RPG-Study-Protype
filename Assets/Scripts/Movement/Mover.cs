@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using RPG.Core;
-using UnityEditor;
+using RPG.Resources;
 using RPG.Saving;
 
 namespace RPG.Movement

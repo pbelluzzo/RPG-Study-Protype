@@ -1,11 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using RPG.Movement;
 using RPG.Core;
-using UnityEngine.Experimental.TerrainAPI;
-using UnityEngine.XR;
 using RPG.Saving;
+using RPG.Resources;
 
 namespace RPG.Combat
 {
@@ -68,6 +65,12 @@ namespace RPG.Combat
             Animator animator = GetComponent<Animator>();
             weapon.Spawn(rightHandTransform, leftHandTransform, animator);
         }
+
+        public Health GetTarget()
+        {
+            if (target != null) return target;
+            return null;
+        }
         private bool GetIsInRange()
         {
             return Vector3.Distance(transform.position, target.transform.position) <= currentWeapon.GetRange();
@@ -99,8 +102,8 @@ namespace RPG.Combat
         void Hit()
         {
             if (target == null) return;
-            if (currentWeapon.HasProjectile()) currentWeapon.LaunchProjectile(rightHandTransform, leftHandTransform, target);
-            if (!currentWeapon.HasProjectile()) target.TakeDamage(currentWeapon.GetDamage());
+            if (currentWeapon.HasProjectile()) currentWeapon.LaunchProjectile(rightHandTransform, leftHandTransform, target,gameObject);
+            if (!currentWeapon.HasProjectile()) target.TakeDamage(gameObject, currentWeapon.GetDamage());
         }
 
         void Shoot()
@@ -116,7 +119,7 @@ namespace RPG.Combat
         public void RestoreState(object state)
         {
             string weaponName = (string)state;
-            Weapon weapon = Resources.Load<Weapon>(weaponName);
+            Weapon weapon = UnityEngine.Resources.Load<Weapon>(weaponName);
             EquipWeapon(weapon);
         }
     }

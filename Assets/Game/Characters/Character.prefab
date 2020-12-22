@@ -18,6 +18,8 @@ GameObject:
   - component: {fileID: 6296363267337156865}
   - component: {fileID: 2864191984612001907}
   - component: {fileID: 98690697648666532}
+  - component: {fileID: 8137014248793483675}
+  - component: {fileID: -7738624700864547486}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -203,3 +205,31 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &8137014248793483675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4920966234590458859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26e22edb73a8d8e4697d5f22a10ffd0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingLevel: 1
+  characterClass: 0
+  progression: {fileID: 11400000, guid: 2bf3e96f582848349af184035139e6bd, type: 2}
+--- !u!114 &-7738624700864547486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4920966234590458859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7fc1bd970812114886f34f71060eb02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  experiencePoints: 0
